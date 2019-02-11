@@ -1,20 +1,42 @@
 :root {
     font-family: sans-serif;
     font-size: 25px;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 body {
     margin: 0;
+    margin-top: 128px;
+    background: #f8f8f8;
 }
 
 #nav a:first-of-type {
     text-decoration: none;
     font-size: 32px;
-    color: #fff;
+    color: inherit;
+}
+
+#nav img {
+    height: 64px;
+    vertical-align: middle;
+    background: #00aac4;
+}
+
+article {
+    background: #fff;
 }
 
 #nav {
-    background:#006777;
+    color:#006777;
+    background: #eee;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: -99;
 }
 
 #nav .centrebox {
@@ -28,10 +50,17 @@ main .centrebox {
 .centrebox {
     max-width: 750px;
     margin: 0 auto;
+    padding: 0 32px
 }
 
 footer {
     padding: 32px;
     /* margin-top: 32px; */
-    border-top: solid 2px #eee
+    background: #f8f8f8
+}
+
+main hr {
+    margin: 32px 0;
+    border: 0;
+    border-top: solid 2px #f8f8f8
 }

@@ -3,7 +3,8 @@ const fm = require("front-matter");
 const fs = require("fs-extra");
 const cheerio = require('cheerio');
 const mdi = require('jstransformer')(require('jstransformer-markdown-it'))
-const files = fs.readdirSync(__dirname + "/src/posts");
+const files = fs.readdirSync(__dirname + "/src/posts").sort().reverse();
+
 
 function template(title, url, snippet) {
     return `# [${title}](/posts/${url.replace(/\.md$/i, ".html")})\n${snippet}\n\n---\n\n`

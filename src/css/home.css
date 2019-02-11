@@ -18,10 +18,9 @@ body > article > main > .centrebox:first-of-type {
 main > .centrebox > :not(hr) {
     max-width: 750px;
     margin: 16px auto;
+    padding: 0 32px
 }
 
-main hr {
-    margin: 32px 0;
-    border: 0;
-    border-top: solid 2px #eee
+footer, hr:last-of-type {
+    display: none;
 }
