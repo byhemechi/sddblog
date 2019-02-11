@@ -1,13 +1,13 @@
 ---
-title: "Things Python sucks at #1: Rendering"
+title: "Things Python sucks at #1/∞: Rendering"
 date: 11 Feb 2019
 author:
     name: George Fischer
     image: george.jpg
 template: post
-tags: python,rendering,ascii,dart
+tags: python,rendering,ascii,node.js
 ---
-Python is not fast. This isn't good for doing lots of things in a short amount of time (like rendering).
+Python is not fast. Low speed isn't good for doing lots of things in a short amount of time (like rendering).
 
 This is a bit of a problem, as my game is going to need to write a lot of characters to the screen, many of which you can't even see. We're going to need to do something else here. It's time to cheat (some more)(oops).
 
