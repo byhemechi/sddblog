@@ -1,0 +1,15 @@
+extends master
+block head
+    link(rel="stylesheet", href="/css/post.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/github.min.css")
+block intro
+    header
+        .centrebox
+            h1=title
+            - const months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+            - const d = new Date(date)
+            .sub=`${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`
+block footer
+    #author
+        img(src='/imgs/' + author.image)
+        span#name=author.name

@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "cmx2": "^3.1.0",
+    "highlight.js": "^9.14.2",
+    "jstransformer-markdown-it": "^2.1.0",
+    "jstransformer-twemoji": "^1.0.0"
+  },
+  "scripts": {
+    "build": "cmx",
+    "now-build": "cmx"
+  }
+}

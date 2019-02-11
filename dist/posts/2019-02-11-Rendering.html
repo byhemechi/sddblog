@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Things Python sucks at #1: Rendering - George's SDD blog</title><link rel="stylesheet" href="/css/master.css"><link rel="stylesheet" href="/css/post.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/github.min.css"></head><body class="post"><header id="nav"><div class="centrebox"><a href="/">George's SDD blog</a></div></header><article><header><div class="centrebox"><h1>Things Python sucks at #1: Rendering</h1><div class="sub">11 Febuary 2019</div></div></header><main><div class="centrebox"><p>Python is not fast. This isn't good for doing lots of things in a short amount of time (like rendering).</p>
+<p>This is a bit of a problem, as my game is going to need to write a lot of characters to the screen, many of which you can't even see. We're going to need to do something else here. It's time to cheat (some more)(oops).</p>
+<p>You know what is faster than python? Node.js. Node.js is really fast. It also has the added bonus that I can compile many other languages, like Dart, to it, and I can package it into a binary using <code>pkg</code>.</p>
+<pre class="hljs"><code data-lang="javascript"><span class="hljs-comment">// Print a rainbow</span>
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> y = <span class="hljs-number">1</span>; y &lt; d.y; y += <span class="hljs-number">2</span>) {
+	<span class="hljs-keyword">var</span> str = []
+	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> x = <span class="hljs-number">0</span>; x &lt; d.x; ++x) {
+		<span class="hljs-keyword">const</span> c1 = hsl(x / d.x, <span class="hljs-number">1</span>, (d.y - y + <span class="hljs-number">1</span>) / d.y);
+		<span class="hljs-keyword">const</span> c2 = hsl(x / d.x, <span class="hljs-number">1</span>, (d.y - y) / d.y);
+		str.push(<span class="hljs-comment">/* String with ansi control chars */</span>)
+	}
+	<span class="hljs-built_in">console</span>.log(str.join(<span class="hljs-string">""</span>)+ <span class="hljs-string">"\u001b[m"</span>)
+}
+</code></pre>
+<p>This is definitely cheating. I have no idea if I'll get away with it. What I do know is that it's way faster, and implementing the renderer in python will kill the the frametime. On another note, writing it in c++ or something would improve it further, but I'm far too lazy to learn them</p>
+</div></main><footer><div class="centrebox"><div id="author"><img src="/imgs/george.jpg"><span id="name">George Fischer</span></div></div></footer></article></body></html>
