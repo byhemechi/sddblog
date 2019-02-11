@@ -64,3 +64,10 @@ main hr {
     border: 0;
     border-top: solid 2px #f8f8f8
 }
+
+
+@media all and (max-width: 600px) {
+    :root {
+        font-size: 18px;
+    }
+}
