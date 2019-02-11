@@ -23,5 +23,11 @@ module.exports = {
                   }
             }
         ]
+    }, {
+        match: [/\.scss/i],
+        transformers: [{
+            "name": "scss"
+        }],
+        ext: "css"
     }]
 }
