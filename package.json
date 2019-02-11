@@ -1,13 +1,18 @@
 {
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "cmx2": "^3.1.2",
+    "front-matter": "^3.0.1",
+    "fs-extra": "^7.0.1",
     "highlight.js": "^9.14.2",
+    "jstransformer": "^1.0.0",
     "jstransformer-markdown-it": "^2.1.0",
     "jstransformer-scss": "^1.0.0",
     "jstransformer-twemoji": "^1.0.0"
   },
   "scripts": {
-    "build": "cmx",
-    "now-build": "cmx"
+    "build": "node build",
+    "now-build": "node build",
+    "clean": "rm -rf dist && rm src/index.md"
   }
 }
