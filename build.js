@@ -22,7 +22,7 @@ files.forEach(function(f) {
         const $ = cheerio.load(mdi.render(data.body).body)
         var snippet = "";
         try {
-            snippet = $("p:first-of-type").text() + "…"
+            snippet = $("p:first-of-type").text().replace(/\. ?$/, "") + "…"
         } catch(err) {}
         file += template(data.attributes.title, f, snippet);
     }
