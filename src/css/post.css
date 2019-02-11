@@ -7,9 +7,9 @@
 }
 
 article header {
-    color: #006777;
+    color: #444;
     background: #f8f8f8;
-    padding: 32px;
+    padding: 32px 0;
     position: sticky;
     top: -40px;
 }
