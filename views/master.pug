@@ -9,6 +9,7 @@ html(lang="en")
         block head
     body(class=template)
         header#nav
+            canvas#bg
             .centrebox
                 a(href='/'): img(src='/imgs/handv2.svg')
             
@@ -20,3 +21,4 @@ html(lang="en")
             footer
                 .centrebox
                     block footer
+    script(src="/js/splash.js")

@@ -6,8 +6,12 @@ const mdi = require('jstransformer')(require('jstransformer-markdown-it'))
 const files = fs.readdirSync(__dirname + "/src/posts").sort().reverse();
 
 
-function template(title, url, snippet) {
-    return `# [${title}](/posts/${url.replace(/\.md$/i, ".html")})\n${snippet}\n\n---\n\n`
+const months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+function template(title, url, d, snippet) {
+    return `# [${title}](/posts/${url.replace(/\.md$/i, ".html")})
+_${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}_\n
+${snippet}\n\n---\n\n`
 }
 
 var file = `---
@@ -24,7 +28,7 @@ files.forEach(function(f) {
         try {
             snippet = $("p:first-of-type").text().replace(/\. ?$/, "") + "…"
         } catch(err) {}
-        file += template(data.attributes.title, f, snippet);
+        file += template(data.attributes.title, f, new Date(data.attributes.date), snippet);
     }
 })
 

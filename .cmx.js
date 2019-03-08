@@ -3,6 +3,10 @@ const md = require('markdown-it')();
 
 module.exports = {
     "build": [{
+        "match": [/\.scss/i],
+        "transformers": [{"name": "scss"}],
+        "ext": ".css"
+    }, {
         "match": [/\.md$/i, /\.markdown$/i],
         "transformers": [
             // Any jstransformer module
@@ -21,13 +25,7 @@ module.exports = {
                       return '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + '</code></pre>';
                     }
                   }
-            }
+            }, {"name": "twemoji"}
         ]
-    }, {
-        match: [/\.scss/i],
-        transformers: [{
-            "name": "scss"
-        }],
-        ext: "css"
     }]
 }

@@ -23,7 +23,17 @@ body {
 #nav img {
     height: 64px;
     vertical-align: middle;
-    background: #00aac4;
+    position: relative;
+    z-index: 1;
+    background: #0005;
+    backdrop-filter: blur(10px);
+}
+
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
 article {
@@ -70,4 +80,9 @@ main hr {
     :root {
         font-size: 18px;
     }
+}
+
+.emoji {
+    height: 1em;
+    vertical-align: middle;
 }
