@@ -7,7 +7,7 @@ This blog is pretty simple. It can't even have multiple pages for the post list 
 The way that it works is also pretty simple. I write *markdown*, run the `cmx` command and it spits out a bunch of html that I can host just like any other website. This is great for me, because it means I can host it basically anywhere, but it does have some downsides.
 
 # Downsides
-As I just said, the way this blog works has some downsides. For starters, I have to build it whenever I want to see an update. This is great for website speed, but for testing out changes it's not great. Another issue is its simplicity. 
+As I just said, the way this blog works has some downsides. For starters, I have to build it whenever I want to see an update. This is great for website speed, but for testing out changes it's not great. Another issue is its simplicity, meaning I had to make a bit of stuff specially for this blog. 
 
 # Making the thing
 ## Starting out
