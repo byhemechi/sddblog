@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "cmx": "../cmx",
     "cmx2": "^3.1.5",
     "front-matter": "^3.0.1",
     "fs-extra": "^7.0.1",
